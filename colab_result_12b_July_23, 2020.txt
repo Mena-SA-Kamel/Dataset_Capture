@@ -1,0 +1,631 @@
+WARNING:tensorflow:From /tensorflow-1.15.2/python3.6/tensorflow_core/python/compat/v2_compat.py:68: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+Using TensorFlow backend.
+WARNING:tensorflow:From grasping_points.py:639: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From grasping_points.py:641: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-07-23 15:24:40.158515: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2020-07-23 15:24:40.159115: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1f97480 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-07-23 15:24:40.159146: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-07-23 15:24:40.161973: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-07-23 15:24:40.291383: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:40.292419: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1f979c0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-07-23 15:24:40.292453: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla P100-PCIE-16GB, Compute Capability 6.0
+2020-07-23 15:24:40.293008: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:40.293899: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties:
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:00:04.0
+2020-07-23 15:24:40.294618: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-23 15:24:40.301699: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-23 15:24:40.306919: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-07-23 15:24:40.307675: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-07-23 15:24:40.312437: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-07-23 15:24:40.313704: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-07-23 15:24:40.321721: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-23 15:24:40.321978: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:40.322992: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:40.323796: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+2020-07-23 15:24:40.323867: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-23 15:24:40.325530: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1180] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-07-23 15:24:40.325560: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1186]      0
+2020-07-23 15:24:40.325576: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 0:   N
+2020-07-23 15:24:40.325776: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:40.326706: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:40.327580: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15216 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:00:04.0, compute capability: 6.0)
+WARNING:tensorflow:From /tensorflow-1.15.2/python3.6/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /tensorflow-1.15.2/python3.6/tensorflow_core/python/util/deprecation.py:507: calling count_nonzero (from tensorflow.python.ops.math_ops) with axis is deprecated and will be removed in a future version.
+Instructions for updating:
+reduction_indices is deprecated, use axis instead
+WARNING:tensorflow:From /content/drive/My Drive/object_vs_background/mrcnn/model.py:1423: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-07-23 15:24:47.202921: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:47.203894: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties:
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:00:04.0
+2020-07-23 15:24:47.203988: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-23 15:24:47.204025: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-23 15:24:47.204069: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-07-23 15:24:47.204097: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-07-23 15:24:47.204129: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-07-23 15:24:47.204158: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-07-23 15:24:47.204208: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-23 15:24:47.204335: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:47.205230: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:47.206034: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+2020-07-23 15:24:47.207442: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:47.208393: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties:
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:00:04.0
+2020-07-23 15:24:47.208450: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-23 15:24:47.208482: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-23 15:24:47.208523: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-07-23 15:24:47.208558: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-07-23 15:24:47.208585: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-07-23 15:24:47.208615: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-07-23 15:24:47.208642: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-23 15:24:47.208769: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:47.209708: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:47.210597: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+2020-07-23 15:24:47.210653: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1180] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-07-23 15:24:47.210672: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1186]      0
+2020-07-23 15:24:47.210681: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 0:   N
+2020-07-23 15:24:47.210816: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:47.211803: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-23 15:24:47.212701: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15216 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:00:04.0, compute capability: 6.0)
+2020-07-23 15:24:47.484430: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Identity: GPU CPU XLA_CPU XLA_GPU
+VariableV2: CPU
+Assign: GPU CPU
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  anchors_1/Variable (VariableV2) /device:GPU:0
+  anchors_1/Variable/Assign (Assign) /device:GPU:0
+  anchors_1/Variable/read (Identity) /device:GPU:0
+
+2020-07-23 15:24:47.484675: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Identity: GPU CPU XLA_CPU XLA_GPU
+VariableV2: CPU
+Assign: GPU CPU
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  anchors_1/Variable_1 (VariableV2) /device:GPU:0
+  anchors_1/Variable_1/Assign (Assign) /device:GPU:0
+  anchors_1/Variable_1/read (Identity) /device:GPU:0
+
+
+Starting at epoch 0. LR=0.002
+
+Checkpoint Path: /content/drive/My Drive/training_logs/grasping_points20200723T1524/mask_rcnn_grasping_points_{epoch:04d}.h5
+Selecting layers to train
+conv1                  (Conv2D)
+bn_conv1               (BatchNorm)
+res2a_branch2a         (Conv2D)
+bn2a_branch2a          (BatchNorm)
+res2a_branch2b         (Conv2D)
+bn2a_branch2b          (BatchNorm)
+res2a_branch2c         (Conv2D)
+res2a_branch1          (Conv2D)
+bn2a_branch2c          (BatchNorm)
+bn2a_branch1           (BatchNorm)
+res2b_branch2a         (Conv2D)
+bn2b_branch2a          (BatchNorm)
+res2b_branch2b         (Conv2D)
+bn2b_branch2b          (BatchNorm)
+res2b_branch2c         (Conv2D)
+bn2b_branch2c          (BatchNorm)
+res2c_branch2a         (Conv2D)
+bn2c_branch2a          (BatchNorm)
+res2c_branch2b         (Conv2D)
+bn2c_branch2b          (BatchNorm)
+res2c_branch2c         (Conv2D)
+bn2c_branch2c          (BatchNorm)
+res3a_branch2a         (Conv2D)
+bn3a_branch2a          (BatchNorm)
+res3a_branch2b         (Conv2D)
+bn3a_branch2b          (BatchNorm)
+res3a_branch2c         (Conv2D)
+res3a_branch1          (Conv2D)
+bn3a_branch2c          (BatchNorm)
+bn3a_branch1           (BatchNorm)
+res3b_branch2a         (Conv2D)
+bn3b_branch2a          (BatchNorm)
+res3b_branch2b         (Conv2D)
+bn3b_branch2b          (BatchNorm)
+res3b_branch2c         (Conv2D)
+bn3b_branch2c          (BatchNorm)
+res3c_branch2a         (Conv2D)
+bn3c_branch2a          (BatchNorm)
+res3c_branch2b         (Conv2D)
+bn3c_branch2b          (BatchNorm)
+res3c_branch2c         (Conv2D)
+bn3c_branch2c          (BatchNorm)
+res3d_branch2a         (Conv2D)
+bn3d_branch2a          (BatchNorm)
+res3d_branch2b         (Conv2D)
+bn3d_branch2b          (BatchNorm)
+res3d_branch2c         (Conv2D)
+bn3d_branch2c          (BatchNorm)
+res4a_branch2a         (Conv2D)
+bn4a_branch2a          (BatchNorm)
+res4a_branch2b         (Conv2D)
+bn4a_branch2b          (BatchNorm)
+res4a_branch2c         (Conv2D)
+res4a_branch1          (Conv2D)
+bn4a_branch2c          (BatchNorm)
+bn4a_branch1           (BatchNorm)
+res4b_branch2a         (Conv2D)
+bn4b_branch2a          (BatchNorm)
+res4b_branch2b         (Conv2D)
+bn4b_branch2b          (BatchNorm)
+res4b_branch2c         (Conv2D)
+bn4b_branch2c          (BatchNorm)
+res4c_branch2a         (Conv2D)
+bn4c_branch2a          (BatchNorm)
+res4c_branch2b         (Conv2D)
+bn4c_branch2b          (BatchNorm)
+res4c_branch2c         (Conv2D)
+bn4c_branch2c          (BatchNorm)
+res4d_branch2a         (Conv2D)
+bn4d_branch2a          (BatchNorm)
+res4d_branch2b         (Conv2D)
+bn4d_branch2b          (BatchNorm)
+res4d_branch2c         (Conv2D)
+bn4d_branch2c          (BatchNorm)
+res4e_branch2a         (Conv2D)
+bn4e_branch2a          (BatchNorm)
+res4e_branch2b         (Conv2D)
+bn4e_branch2b          (BatchNorm)
+res4e_branch2c         (Conv2D)
+bn4e_branch2c          (BatchNorm)
+res4f_branch2a         (Conv2D)
+bn4f_branch2a          (BatchNorm)
+res4f_branch2b         (Conv2D)
+bn4f_branch2b          (BatchNorm)
+res4f_branch2c         (Conv2D)
+bn4f_branch2c          (BatchNorm)
+res5a_branch2a         (Conv2D)
+bn5a_branch2a          (BatchNorm)
+res5a_branch2b         (Conv2D)
+bn5a_branch2b          (BatchNorm)
+res5a_branch2c         (Conv2D)
+res5a_branch1          (Conv2D)
+bn5a_branch2c          (BatchNorm)
+bn5a_branch1           (BatchNorm)
+res5b_branch2a         (Conv2D)
+bn5b_branch2a          (BatchNorm)
+res5b_branch2b         (Conv2D)
+bn5b_branch2b          (BatchNorm)
+res5b_branch2c         (Conv2D)
+bn5b_branch2c          (BatchNorm)
+res5c_branch2a         (Conv2D)
+bn5c_branch2a          (BatchNorm)
+res5c_branch2b         (Conv2D)
+bn5c_branch2b          (BatchNorm)
+res5c_branch2c         (Conv2D)
+bn5c_branch2c          (BatchNorm)
+fpn_c5p5               (Conv2D)
+fpn_c4p4               (Conv2D)
+fpn_p4                 (Conv2D)
+In model:  rpn_model
+    grasp_rpn_conv_shared   (Conv2D)
+    grasp_rpn_class_raw_1   (Conv2D)
+    grasp_rpn_class_raw_2   (Conv2D)
+    grasp_rpn_bbox_pred_1   (Conv2D)
+    grasp_rpn_bbox_pred_2   (Conv2D)
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:431: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:438: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+/usr/local/lib/python3.6/dist-packages/keras/engine/training_generator.py:49: UserWarning: Using a generator with `use_multiprocessing=True` and multiple workers may duplicate your data. Please consider using the `keras.utils.Sequence class.
+  UserWarning('Using a generator with `use_multiprocessing=True`'
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/callbacks/tensorboard_v1.py:200: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/callbacks/tensorboard_v1.py:203: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+Epoch 1/500
+2020-07-23 15:26:07.058796: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-23 15:26:12.041826: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+   2/1538 [..............................] - ETA: 11:28:15 - loss: 0.1234 - rpn_loss: 0.1234/usr/local/lib/python3.6/dist-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.631183). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+1538/1538 [==============================] - 1097s 713ms/step - loss: 0.0881 - rpn_loss: 0.0881 - val_loss: 0.0637 - val_rpn_loss: 0.0835
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/callbacks/tensorboard_v1.py:343: The name tf.Summary is deprecated. Please use tf.compat.v1.Summary instead.
+
+Epoch 2/500
+1538/1538 [==============================] - 1041s 677ms/step - loss: 0.0818 - rpn_loss: 0.0818 - val_loss: 0.0781 - val_rpn_loss: 0.0815
+Epoch 3/500
+1538/1538 [==============================] - 1041s 677ms/step - loss: 0.0792 - rpn_loss: 0.0792 - val_loss: 0.0902 - val_rpn_loss: 0.0796
+Epoch 4/500
+1538/1538 [==============================] - 1037s 674ms/step - loss: 0.0783 - rpn_loss: 0.0783 - val_loss: 0.0778 - val_rpn_loss: 0.0811
+Epoch 5/500
+1538/1538 [==============================] - 970s 631ms/step - loss: 0.0763 - rpn_loss: 0.0763 - val_loss: 0.0701 - val_rpn_loss: 0.0769
+Epoch 6/500
+1538/1538 [==============================] - 1030s 669ms/step - loss: 0.0742 - rpn_loss: 0.0742 - val_loss: 0.0786 - val_rpn_loss: 0.0759
+Epoch 7/500
+1538/1538 [==============================] - 1025s 666ms/step - loss: 0.0717 - rpn_loss: 0.0717 - val_loss: 0.0747 - val_rpn_loss: 0.0714
+Epoch 8/500
+1538/1538 [==============================] - 1042s 678ms/step - loss: 0.0714 - rpn_loss: 0.0714 - val_loss: 0.0788 - val_rpn_loss: 0.0714
+Epoch 9/500
+1538/1538 [==============================] - 1040s 676ms/step - loss: 0.0707 - rpn_loss: 0.0707 - val_loss: 0.0793 - val_rpn_loss: 0.0731
+Epoch 10/500
+1538/1538 [==============================] - 1035s 673ms/step - loss: 0.0700 - rpn_loss: 0.0700 - val_loss: 0.0568 - val_rpn_loss: 0.0713
+Epoch 11/500
+1538/1538 [==============================] - 1031s 670ms/step - loss: 0.0695 - rpn_loss: 0.0695 - val_loss: 0.0778 - val_rpn_loss: 0.0708
+Epoch 12/500
+1538/1538 [==============================] - 1029s 669ms/step - loss: 0.0702 - rpn_loss: 0.0702 - val_loss: 0.0662 - val_rpn_loss: 0.0732
+Epoch 13/500
+1538/1538 [==============================] - 1029s 669ms/step - loss: 0.0687 - rpn_loss: 0.0687 - val_loss: 0.0692 - val_rpn_loss: 0.0705
+Epoch 14/500
+1538/1538 [==============================] - 1053s 685ms/step - loss: 0.0682 - rpn_loss: 0.0682 - val_loss: 0.0696 - val_rpn_loss: 0.0704
+Epoch 15/500
+1538/1538 [==============================] - 1039s 675ms/step - loss: 0.0666 - rpn_loss: 0.0665 - val_loss: 0.0633 - val_rpn_loss: 0.0672
+Epoch 16/500
+1538/1538 [==============================] - 1046s 680ms/step - loss: 0.0669 - rpn_loss: 0.0669 - val_loss: 0.0687 - val_rpn_loss: 0.0687
+Epoch 17/500
+1538/1538 [==============================] - 1050s 683ms/step - loss: 0.0656 - rpn_loss: 0.0656 - val_loss: 0.0751 - val_rpn_loss: 0.0681
+Epoch 18/500
+1538/1538 [==============================] - 1041s 677ms/step - loss: 0.0660 - rpn_loss: 0.0660 - val_loss: 0.0694 - val_rpn_loss: 0.0689
+Epoch 19/500
+1538/1538 [==============================] - 1049s 682ms/step - loss: 0.0653 - rpn_loss: 0.0653 - val_loss: 0.0621 - val_rpn_loss: 0.0691
+Epoch 20/500
+1538/1538 [==============================] - 1057s 687ms/step - loss: 0.0664 - rpn_loss: 0.0664 - val_loss: 0.0647 - val_rpn_loss: 0.0696
+Epoch 21/500
+1538/1538 [==============================] - 1054s 685ms/step - loss: 0.0656 - rpn_loss: 0.0656 - val_loss: 0.0575 - val_rpn_loss: 0.0689
+Epoch 22/500
+1538/1538 [==============================] - 1064s 692ms/step - loss: 0.0645 - rpn_loss: 0.0645 - val_loss: 0.0661 - val_rpn_loss: 0.0674
+Epoch 23/500
+1538/1538 [==============================] - 1057s 687ms/step - loss: 0.0643 - rpn_loss: 0.0643 - val_loss: 0.0565 - val_rpn_loss: 0.0657
+Epoch 24/500
+1538/1538 [==============================] - 1057s 687ms/step - loss: 0.0639 - rpn_loss: 0.0639 - val_loss: 0.0748 - val_rpn_loss: 0.0660
+Epoch 25/500
+1538/1538 [==============================] - 1055s 686ms/step - loss: 0.0627 - rpn_loss: 0.0627 - val_loss: 0.0708 - val_rpn_loss: 0.0668
+Epoch 26/500
+1538/1538 [==============================] - 1063s 691ms/step - loss: 0.0628 - rpn_loss: 0.0628 - val_loss: 0.0670 - val_rpn_loss: 0.0682
+Epoch 27/500
+1538/1538 [==============================] - 1057s 687ms/step - loss: 0.0629 - rpn_loss: 0.0629 - val_loss: 0.0514 - val_rpn_loss: 0.0643
+Epoch 28/500
+1538/1538 [==============================] - 1051s 683ms/step - loss: 0.0626 - rpn_loss: 0.0626 - val_loss: 0.0559 - val_rpn_loss: 0.0678
+Epoch 29/500
+1538/1538 [==============================] - 1055s 686ms/step - loss: 0.0623 - rpn_loss: 0.0622 - val_loss: 0.0849 - val_rpn_loss: 0.0665
+Epoch 30/500
+1538/1538 [==============================] - 1051s 683ms/step - loss: 0.0615 - rpn_loss: 0.0615 - val_loss: 0.0606 - val_rpn_loss: 0.0657
+Epoch 31/500
+1538/1538 [==============================] - 1060s 689ms/step - loss: 0.0610 - rpn_loss: 0.0610 - val_loss: 0.0740 - val_rpn_loss: 0.0652
+Epoch 32/500
+1538/1538 [==============================] - 1056s 687ms/step - loss: 0.0614 - rpn_loss: 0.0613 - val_loss: 0.0568 - val_rpn_loss: 0.0650
+Epoch 33/500
+1538/1538 [==============================] - 1057s 687ms/step - loss: 0.0600 - rpn_loss: 0.0600 - val_loss: 0.0631 - val_rpn_loss: 0.0644
+Epoch 34/500
+1538/1538 [==============================] - 1052s 684ms/step - loss: 0.0596 - rpn_loss: 0.0596 - val_loss: 0.0747 - val_rpn_loss: 0.0648
+Epoch 35/500
+1538/1538 [==============================] - 1054s 685ms/step - loss: 0.0605 - rpn_loss: 0.0605 - val_loss: 0.0492 - val_rpn_loss: 0.0663
+Epoch 36/500
+1538/1538 [==============================] - 1053s 685ms/step - loss: 0.0607 - rpn_loss: 0.0606 - val_loss: 0.0674 - val_rpn_loss: 0.0667
+
+##########
+WARNING:tensorflow:From /tensorflow-1.15.2/python3.6/tensorflow_core/python/compat/v2_compat.py:68: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+Using TensorFlow backend.
+WARNING:tensorflow:From grasping_points.py:639: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From grasping_points.py:641: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-07-24 02:34:47.777917: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2020-07-24 02:34:47.778551: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x2da1480 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-07-24 02:34:47.778587: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-07-24 02:34:47.795516: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-07-24 02:34:47.927466: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:47.928589: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x2da19c0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-07-24 02:34:47.928630: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla P100-PCIE-16GB, Compute Capability 6.0
+2020-07-24 02:34:47.928954: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:47.929838: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties:
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:00:04.0
+2020-07-24 02:34:47.940840: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-24 02:34:47.966973: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-24 02:34:47.982265: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-07-24 02:34:47.995567: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-07-24 02:34:48.013249: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-07-24 02:34:48.021495: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-07-24 02:34:48.044318: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-24 02:34:48.044538: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:48.045566: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:48.046534: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+2020-07-24 02:34:48.046724: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-24 02:34:48.048499: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1180] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-07-24 02:34:48.048533: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1186]      0
+2020-07-24 02:34:48.048549: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 0:   N
+2020-07-24 02:34:48.048793: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:48.049784: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:48.050791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15216 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:00:04.0, compute capability: 6.0)
+WARNING:tensorflow:From /tensorflow-1.15.2/python3.6/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4070: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /tensorflow-1.15.2/python3.6/tensorflow_core/python/util/deprecation.py:507: calling count_nonzero (from tensorflow.python.ops.math_ops) with axis is deprecated and will be removed in a future version.
+Instructions for updating:
+reduction_indices is deprecated, use axis instead
+WARNING:tensorflow:From /content/drive/My Drive/object_vs_background/mrcnn/model.py:1423: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-07-24 02:34:58.340409: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:58.341392: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties:
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:00:04.0
+2020-07-24 02:34:58.341514: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-24 02:34:58.341550: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-24 02:34:58.341578: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-07-24 02:34:58.341604: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-07-24 02:34:58.341630: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-07-24 02:34:58.341656: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-07-24 02:34:58.341682: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-24 02:34:58.341799: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:58.342723: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:58.343555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+2020-07-24 02:34:58.344495: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:58.345381: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties:
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:00:04.0
+2020-07-24 02:34:58.345441: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-24 02:34:58.345497: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-24 02:34:58.345523: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-07-24 02:34:58.345552: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-07-24 02:34:58.345601: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-07-24 02:34:58.345622: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-07-24 02:34:58.345658: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-24 02:34:58.345758: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:58.346702: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:58.347529: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+2020-07-24 02:34:58.347597: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1180] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-07-24 02:34:58.347614: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1186]      0
+2020-07-24 02:34:58.347622: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 0:   N
+2020-07-24 02:34:58.347757: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:58.348674: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-07-24 02:34:58.349524: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15216 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:00:04.0, compute capability: 6.0)
+2020-07-24 02:34:58.626567: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Identity: GPU CPU XLA_CPU XLA_GPU
+VariableV2: CPU
+Assign: GPU CPU
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  anchors_1/Variable (VariableV2) /device:GPU:0
+  anchors_1/Variable/Assign (Assign) /device:GPU:0
+  anchors_1/Variable/read (Identity) /device:GPU:0
+
+2020-07-24 02:34:58.626757: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+  /job:localhost/replica:0/task:0/device:CPU:0].
+See below for details of this colocation group:
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+Identity: GPU CPU XLA_CPU XLA_GPU
+VariableV2: CPU
+Assign: GPU CPU
+
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  anchors_1/Variable_1 (VariableV2) /device:GPU:0
+  anchors_1/Variable_1/Assign (Assign) /device:GPU:0
+  anchors_1/Variable_1/read (Identity) /device:GPU:0
+
+
+Starting at epoch 0. LR=0.002
+
+Checkpoint Path: /content/drive/My Drive/training_logs/grasping_points20200724T0235/mask_rcnn_grasping_points_{epoch:04d}.h5
+Selecting layers to train
+conv1                  (Conv2D)
+bn_conv1               (BatchNorm)
+res2a_branch2a         (Conv2D)
+bn2a_branch2a          (BatchNorm)
+res2a_branch2b         (Conv2D)
+bn2a_branch2b          (BatchNorm)
+res2a_branch2c         (Conv2D)
+res2a_branch1          (Conv2D)
+bn2a_branch2c          (BatchNorm)
+bn2a_branch1           (BatchNorm)
+res2b_branch2a         (Conv2D)
+bn2b_branch2a          (BatchNorm)
+res2b_branch2b         (Conv2D)
+bn2b_branch2b          (BatchNorm)
+res2b_branch2c         (Conv2D)
+bn2b_branch2c          (BatchNorm)
+res2c_branch2a         (Conv2D)
+bn2c_branch2a          (BatchNorm)
+res2c_branch2b         (Conv2D)
+bn2c_branch2b          (BatchNorm)
+res2c_branch2c         (Conv2D)
+bn2c_branch2c          (BatchNorm)
+res3a_branch2a         (Conv2D)
+bn3a_branch2a          (BatchNorm)
+res3a_branch2b         (Conv2D)
+bn3a_branch2b          (BatchNorm)
+res3a_branch2c         (Conv2D)
+res3a_branch1          (Conv2D)
+bn3a_branch2c          (BatchNorm)
+bn3a_branch1           (BatchNorm)
+res3b_branch2a         (Conv2D)
+bn3b_branch2a          (BatchNorm)
+res3b_branch2b         (Conv2D)
+bn3b_branch2b          (BatchNorm)
+res3b_branch2c         (Conv2D)
+bn3b_branch2c          (BatchNorm)
+res3c_branch2a         (Conv2D)
+bn3c_branch2a          (BatchNorm)
+res3c_branch2b         (Conv2D)
+bn3c_branch2b          (BatchNorm)
+res3c_branch2c         (Conv2D)
+bn3c_branch2c          (BatchNorm)
+res3d_branch2a         (Conv2D)
+bn3d_branch2a          (BatchNorm)
+res3d_branch2b         (Conv2D)
+bn3d_branch2b          (BatchNorm)
+res3d_branch2c         (Conv2D)
+bn3d_branch2c          (BatchNorm)
+res4a_branch2a         (Conv2D)
+bn4a_branch2a          (BatchNorm)
+res4a_branch2b         (Conv2D)
+bn4a_branch2b          (BatchNorm)
+res4a_branch2c         (Conv2D)
+res4a_branch1          (Conv2D)
+bn4a_branch2c          (BatchNorm)
+bn4a_branch1           (BatchNorm)
+res4b_branch2a         (Conv2D)
+bn4b_branch2a          (BatchNorm)
+res4b_branch2b         (Conv2D)
+bn4b_branch2b          (BatchNorm)
+res4b_branch2c         (Conv2D)
+bn4b_branch2c          (BatchNorm)
+res4c_branch2a         (Conv2D)
+bn4c_branch2a          (BatchNorm)
+res4c_branch2b         (Conv2D)
+bn4c_branch2b          (BatchNorm)
+res4c_branch2c         (Conv2D)
+bn4c_branch2c          (BatchNorm)
+res4d_branch2a         (Conv2D)
+bn4d_branch2a          (BatchNorm)
+res4d_branch2b         (Conv2D)
+bn4d_branch2b          (BatchNorm)
+res4d_branch2c         (Conv2D)
+bn4d_branch2c          (BatchNorm)
+res4e_branch2a         (Conv2D)
+bn4e_branch2a          (BatchNorm)
+res4e_branch2b         (Conv2D)
+bn4e_branch2b          (BatchNorm)
+res4e_branch2c         (Conv2D)
+bn4e_branch2c          (BatchNorm)
+res4f_branch2a         (Conv2D)
+bn4f_branch2a          (BatchNorm)
+res4f_branch2b         (Conv2D)
+bn4f_branch2b          (BatchNorm)
+res4f_branch2c         (Conv2D)
+bn4f_branch2c          (BatchNorm)
+res5a_branch2a         (Conv2D)
+bn5a_branch2a          (BatchNorm)
+res5a_branch2b         (Conv2D)
+bn5a_branch2b          (BatchNorm)
+res5a_branch2c         (Conv2D)
+res5a_branch1          (Conv2D)
+bn5a_branch2c          (BatchNorm)
+bn5a_branch1           (BatchNorm)
+res5b_branch2a         (Conv2D)
+bn5b_branch2a          (BatchNorm)
+res5b_branch2b         (Conv2D)
+bn5b_branch2b          (BatchNorm)
+res5b_branch2c         (Conv2D)
+bn5b_branch2c          (BatchNorm)
+res5c_branch2a         (Conv2D)
+bn5c_branch2a          (BatchNorm)
+res5c_branch2b         (Conv2D)
+bn5c_branch2b          (BatchNorm)
+res5c_branch2c         (Conv2D)
+bn5c_branch2c          (BatchNorm)
+fpn_c5p5               (Conv2D)
+fpn_c4p4               (Conv2D)
+fpn_p4                 (Conv2D)
+In model:  rpn_model
+    grasp_rpn_conv_shared   (Conv2D)
+    grasp_rpn_class_raw_1   (Conv2D)
+    grasp_rpn_class_raw_2   (Conv2D)
+    grasp_rpn_bbox_pred_1   (Conv2D)
+    grasp_rpn_bbox_pred_2   (Conv2D)
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:431: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:438: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+/usr/local/lib/python3.6/dist-packages/keras/engine/training_generator.py:49: UserWarning: Using a generator with `use_multiprocessing=True` and multiple workers may duplicate your data. Please consider using the `keras.utils.Sequence class.
+  UserWarning('Using a generator with `use_multiprocessing=True`'
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/callbacks/tensorboard_v1.py:200: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/callbacks/tensorboard_v1.py:203: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+Epoch 1/500
+2020-07-24 02:36:18.680933: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-24 02:36:24.094154: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+   2/1538 [..............................] - ETA: 11:27:15 - loss: 0.0528 - rpn_loss: 0.0528/usr/local/lib/python3.6/dist-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.589955). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+1538/1538 [==============================] - 1079s 702ms/step - loss: 0.0609 - rpn_loss: 0.0609 - val_loss: 0.0697 - val_rpn_loss: 0.0651
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/callbacks/tensorboard_v1.py:343: The name tf.Summary is deprecated. Please use tf.compat.v1.Summary instead.
+
+Epoch 2/500
+1538/1538 [==============================] - 1037s 674ms/step - loss: 0.0594 - rpn_loss: 0.0593 - val_loss: 0.0658 - val_rpn_loss: 0.0647
+Epoch 3/500
+1538/1538 [==============================] - 1039s 675ms/step - loss: 0.0595 - rpn_loss: 0.0595 - val_loss: 0.0681 - val_rpn_loss: 0.0629
+Epoch 4/500
+1538/1538 [==============================] - 1047s 681ms/step - loss: 0.0596 - rpn_loss: 0.0596 - val_loss: 0.0637 - val_rpn_loss: 0.0639
+Epoch 5/500
+1538/1538 [==============================] - 990s 644ms/step - loss: 0.0587 - rpn_loss: 0.0587 - val_loss: 0.0518 - val_rpn_loss: 0.0631
+Epoch 6/500
+1538/1538 [==============================] - 1039s 675ms/step - loss: 0.0597 - rpn_loss: 0.0597 - val_loss: 0.0693 - val_rpn_loss: 0.0633
+Epoch 7/500
+1538/1538 [==============================] - 1036s 674ms/step - loss: 0.0583 - rpn_loss: 0.0583 - val_loss: 0.0553 - val_rpn_loss: 0.0634
+Epoch 8/500
+1538/1538 [==============================] - 1032s 671ms/step - loss: 0.0588 - rpn_loss: 0.0588 - val_loss: 0.0678 - val_rpn_loss: 0.0644
+Epoch 9/500
+1538/1538 [==============================] - 1039s 675ms/step - loss: 0.0588 - rpn_loss: 0.0588 - val_loss: 0.0514 - val_rpn_loss: 0.0649
+Epoch 10/500
+1538/1538 [==============================] - 1028s 668ms/step - loss: 0.0590 - rpn_loss: 0.0590 - val_loss: 0.0727 - val_rpn_loss: 0.0624
+Epoch 11/500
+1538/1538 [==============================] - 1030s 670ms/step - loss: 0.0585 - rpn_loss: 0.0585 - val_loss: 0.0630 - val_rpn_loss: 0.0640
+Epoch 12/500
+1538/1538 [==============================] - 1023s 665ms/step - loss: 0.0579 - rpn_loss: 0.0579 - val_loss: 0.0665 - val_rpn_loss: 0.0628
+Epoch 13/500
+1538/1538 [==============================] - 1018s 662ms/step - loss: 0.0587 - rpn_loss: 0.0587 - val_loss: 0.0791 - val_rpn_loss: 0.0643
+Epoch 14/500
+1538/1538 [==============================] - 1019s 662ms/step - loss: 0.0584 - rpn_loss: 0.0584 - val_loss: 0.0681 - val_rpn_loss: 0.0644
+Epoch 15/500
+1538/1538 [==============================] - 1014s 660ms/step - loss: 0.0582 - rpn_loss: 0.0582 - val_loss: 0.0565 - val_rpn_loss: 0.0624
+Epoch 16/500
+1538/1538 [==============================] - 1007s 655ms/step - loss: 0.0584 - rpn_loss: 0.0583 - val_loss: 0.0700 - val_rpn_loss: 0.0622
+Epoch 17/500
+1538/1538 [==============================] - 1009s 656ms/step - loss: 0.0577 - rpn_loss: 0.0577 - val_loss: 0.0763 - val_rpn_loss: 0.0629
+Epoch 18/500
+1538/1538 [==============================] - 1013s 659ms/step - loss: 0.0579 - rpn_loss: 0.0579 - val_loss: 0.0699 - val_rpn_loss: 0.0638
+Epoch 19/500
+1538/1538 [==============================] - 1009s 656ms/step - loss: 0.0583 - rpn_loss: 0.0583 - val_loss: 0.0657 - val_rpn_loss: 0.0626
+Epoch 20/500
+1538/1538 [==============================] - 1019s 663ms/step - loss: 0.0585 - rpn_loss: 0.0585 - val_loss: 0.0597 - val_rpn_loss: 0.0644
+Epoch 21/500
+1538/1538 [==============================] - 1027s 668ms/step - loss: 0.0579 - rpn_loss: 0.0579 - val_loss: 0.0753 - val_rpn_loss: 0.0621
+Epoch 22/500
+1538/1538 [==============================] - 1028s 669ms/step - loss: 0.0580 - rpn_loss: 0.0580 - val_loss: 0.0561 - val_rpn_loss: 0.0651
+Epoch 23/500
+1538/1538 [==============================] - 1022s 664ms/step - loss: 0.0581 - rpn_loss: 0.0581 - val_loss: 0.0545 - val_rpn_loss: 0.0641
+Epoch 24/500
+1538/1538 [==============================] - 1022s 665ms/step - loss: 0.0580 - rpn_loss: 0.0580 - val_loss: 0.0494 - val_rpn_loss: 0.0616
+Epoch 25/500
+1538/1538 [==============================] - 1019s 662ms/step - loss: 0.0581 - rpn_loss: 0.0581 - val_loss: 0.0691 - val_rpn_loss: 0.0641
+Epoch 26/500
+1538/1538 [==============================] - 1019s 663ms/step - loss: 0.0570 - rpn_loss: 0.0570 - val_loss: 0.0559 - val_rpn_loss: 0.0632
+Epoch 27/500
+1538/1538 [==============================] - 1024s 666ms/step - loss: 0.0582 - rpn_loss: 0.0582 - val_loss: 0.0563 - val_rpn_loss: 0.0633
+Epoch 28/500
+1538/1538 [==============================] - 1025s 667ms/step - loss: 0.0581 - rpn_loss: 0.0581 - val_loss: 0.0573 - val_rpn_loss: 0.0632
+Epoch 29/500
+ 173/1538 [==>...........................] - ETA: 11:16 - loss: 0.0563 - rpn_loss: 0.0563
+

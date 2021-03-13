@@ -44,7 +44,4 @@ def initialize_objects():
 #
 
 
-#
-# import code;
-#
-# code.interact(local=dict(globals(), **locals()))
+
